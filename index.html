@@ -20,12 +20,20 @@
   </head>
   <body>
     <main id="main">
+       <form name="searchTerms"><input type="text" id="searchTerms">Search</input>
+    <input type="submit" value="search" id="search"></input></form>
       <div id="errors"></div>
     </main>
     <div class="flexbox-container">
       <div>
         <h3>Repositories</h3>
-        <div id="results"></div>
+        <div id="results" class= "results-template">
+     <li> {{full_name}}</li>
+      <li>{{description}}</li>
+      <li><a href="{{html_url}}">{{html_url}} </a></li>
+      <li>{{owner.login}}</li>
+      <li> {{owner.avatar_url}} </li>
+      <li><a href="{{owner.html_url}}">{{owner.html_url}}</a> </li>
       </div>
       <div>
         <h3>Details</h3>
